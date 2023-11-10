@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME SUR LE CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        td{
+              border: 1px solid white;
+              padding: 5px ;
+          }
+          table{
+              border-collapse: collapse;
+          }
+     </style>
+</head>
+<body>
+    <div class=" container text-center fw-bold text-uppercase bg-info fs-2 py-2 mt-3 text-light" style="border-radius: 50px  0px 50px 0px;">
+        <p>resume sur css</p>
+
+    </div>
+    <div class="container-fluid my-3 text-light bg-dark">
+        <span class="d-flex justify-content-center">
+            <p class="text-center text-capitalize px-5 fs-1 mt-5 text-light bg-info" style="border-radius: 50px;">definition </p>
+        </span>
+        <p> CSS veut dire <span class="text-uppercase fs-5 text-info fw-bold">c</span>ascading <span class="text-uppercase fs-5 text-info fw-bold">s</span>tyle <span class="text-uppercase fs-5 text-info fw-bold">s</span>heet 
+            sert à modifier l’apparence de nos pages web en appliquant des styles au 
+            contenu en HTML    </p>
+            <span class="d-flex justify-content-center">
+                <p class="text-center text-capitalize px-5 fs-1 mt-5 text-light bg-info" style="border-radius: 50px;">selecteurs , proprietes et valeurs </p>
+            </span>
+            <ul>
+                <li><span class="text-info text-capitalize fs-4">selecteurs</span> <br>
+                    Un sélecteur, tout d’abord, va servir à déterminer à quel(s) élément(s) HTML ou à quel type 
+                    d’éléments on souhaite appliquer un style particulier. Si l’on souhaite appliquer un style particulier 
+                    à tous nos paragraphes, par exemple, on utilisera le sélecteur « p ».</li>
+                <li><span class="text-info text-capitalize fs-4">proprietes</span> <br>
+                    Une propriété va nous servir à modifier le style d’un élément en ciblant un critère bien particulier 
+                    comme la taille d’un texte, sa police ou sa couleur par exemple.
+                </li>
+                <li><span class="text-info text-capitalize fs-4">valeurs</span> <br>
+                    Une valeur, enfin, va venir compléter une propriété et va en déterminer le comportement. Pour la 
+                    propriété servant à changer la couleur d’un texte par exemple, la valeur va être la nouvelle couleur 
+                    à appliquer.
+                </li>
+            </ul>
+            <p><span class="text-decoration-underline">EX: </span><span class="text-warning">p</span>{<pre>
+      <span class="text-primary">color: <span style="color: orange;">red</span></span>;
+     }
+                        </pre>
+                        Dans cette exemple <span class="text-info">p</span> est un selecteur simple et ceuci veut dire que nous allons appliquer un style particulier
+                        a tous les elements p. <br><span class="text-info">color</span> represente la propriete (qui sert à modifier la couleur d’un texte) <br>
+                        <span class="text-info">red</span> est la valeur pour notre exemple(et c'est le caracteres que notre paragraphe va prendre)
+                    </p>
+        <span class="d-flex justify-content-center">
+             <p class="text-center text-capitalize px-5 fs-1 mt-5 text-light bg-info" style="border-radius: 50px;">où écrire le CSS ?
+            </p>
+         </span>
+         <p>Nous avons trois possibilités pour écrire notre</p>
+         <ul>
+            <li>A l’intérieur de l’élément head de notre document HTML <br>
+             <u>EX:</u>   <br>
+             <pre>
+&lt;<span class="text-primary">!DOCTYPE html</span>&gt;  
+&lt;<span class="text-primary">html lang=<span style="color: orange;">"en"</span></span>&gt;
+    &lt;<span class="text-primary">head</span>&gt;
+        &lt;<span class="text-primary">meta charset= <span style="color: orange;">"UTF-8"</span></span>&gt;
+        &lt;<span class="text-primary">title</span>&gt;  &lt;<span class="text-primary">/title</span>&gt;
+        &lt;<span class="text-primary">style</span>&gt;
+            <pre><p><span class="text-warning">p</span>{
+            <span class="text-primary">color: <span style="color: orange;">red</span></span>;
+           }  </pre>
+        &lt;<span class="text-primary">/style</span>&gt;
+     &lt;<span class="text-primary">/head</span>&gt;
+     &lt;<span class="text-primary">body</span>&gt;
+              
+    &lt;<span class="text-primary">/body</span>&gt;
+ &lt;<span class="text-primary">/html</span>&gt;
+                <p style="color: red;"></p>
+                               
+                            </pre>
+                         </li>
+            <li> Dans la balise ouvrante des éléments de notre fichier HTML <br>
+            <u>EX:</u> &lt;<span class="text-primary">p style</span>= <span style="color: orange;">"color : red;"</span>&gt; &lt;/p&gt;</li>
+            <li>Dans un fichier portant l’extension .css séparé.
+                 <br> Dans ce cas on doit ecrire le css dans un ficher portant l'extension puis le relie a notre ficher html  <span class="text-info fs-5">.css</span>
+                 <u>EX: </u> si notre ficher css porte le nom style.css ,on doit iuliser la balise link dans le head pour relier nos deux ficher <br>
+                 &lt;<span class="text-primary">link rel</span> = <span style="color: orange;">"stylesheet"</span> <span class="text-primary">href</span>=
+                 <span style="color: orange;">"style.css</span>&gt;
+            </li>
+         </ul>
+         Pour des raisons de performances du code, de clarté et d’économie de temps, je vous 
+recommande vivement d’utiliser la dernière méthode dès que cela est possible.
+<span class="d-flex justify-content-center">
+    <p class="text-center text-capitalize px-5 fs-1 mt-5 text-light bg-info" style="border-radius: 50px;">div et span </p>
+</span>   
+<p>En HTML, tout élément est soit de type block, soit de type inline. Par exemple, div est un élément 
+    de type block tandis que span est un élément de type inline.
+    Les éléments de type block sont fondamentalement différents des éléments de type inline en 
+    HTML et il est essentiel de bien comprendre les différences entre ces deux types</p>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div>
+                <span>les element de type block</span>
+                <ul>
+                    <li>Commence sur une nouvelle ligne</li>
+                    <li>Occupent toute la largeur disponible</li>
+                    <li>peuvent imbriquer les uns dans les autres et peuvent contenir des elements de type inline</li>
+                </ul>
+                <u>EX:</u> &lt;p&gt; &lt;/p&gt; ;&lt;h1&gt; &lt;/h1&gt; ; &lt;ul&gt; &lt;/ul&gt; &lt;li&gt; &lt;/li&gt; ; etc...
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6">
+            <div>
+                <span>les element de type inline</span>
+                <ul>
+                    <li>S'insere dans une ligne ligne</li>
+                    <li>Occupent seulement la largeur necessaire</li>
+                    <li>peuvent imbriquer les uns dans les autres mais ne peuvent pas contenir des elements de type block</li>
+                </ul>
+                <u>EX:</u> &lt;em&gt; &lt;/em&gt; ;&lt;strong&gt; &lt;/strong&gt; ; &lt;mark&gt; &lt;/mark&gt; &lt;img&gt; etc...
+            </div>
+
+        </div>
+    </div>
+    <span class="d-flex justify-content-center">
+        <p class="text-center text-capitalize px-5 fs-1 mt-5 text-light bg-info" style="border-radius: 50px;"> Formater du Texte & Positionner des Éléments </p>
+    </span> 
+    <table class="d-flex justify-content-center">
+        <tr>
+            <td class="text-info fs-5 text-capitalize">proprietes</td>
+            <td class="text-info fs-5 text-capitalize">valeures</td>
+            <td class="text-info fs-5 text-capitalize"> description</td>
+        </tr>
+        <tr>
+            <td>font-family</td>
+            <td>police1, police2 ,serif , sans-serif</td>
+            <td>se sont des types de police d'ecriture</td>
+        </tr>
+        <tr>
+            <td>font-size</td>
+            <td> x <span class="text-info">em</span>; y <span class="text-info">px</span>; z<span class="text-info">%</span> etc</td>
+            <td>permet de definir la taille de nos ecriture</td>
+        </tr>
+        <tr>
+            <td>font-weight</td>
+            <td>bold , normal</td>
+            <td>defit le poit de l'ecriture</td>
+        </tr>
+        <tr>
+            <td>font-style</td>
+            <td>italic , oblique , normal</td>
+            <td>defit la police en soit</td>
+        </tr>
+        <tr>
+            <td>text-decoration</td>
+            <td>underline , overline , line-through , blink , none</td>
+            <td>soulignement , ligne au dessus  , barre , clignotant , pas de decoration pou les liens</td>
+        </tr>
+        <tr>
+            <td>text-transform</td>
+            <td>capitalize , lowercase , uppercase</td>
+            <td>majuscule , minuscule etc</td>
+        </tr>
+        <tr>
+            <td>text-align</td>
+            <td>left , right , center ,justify</td>
+            <td>permet de definir alignement horizontal du texte</td>
+        </tr>
+        <tr>
+            <td>line-height</td>
+            <td>x <span class="text-info"> px</span></td>
+            <td>permet de definir la hauteur entre les ligne</td>
+        </tr>
+        <tr>
+            <td>text-indent</td>
+            <td>x <span class="text-info"> px</span></td>
+            <td>alinea</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>red , green , yellow ...</td>
+            <td>couleur du text</td>
+        </tr>
+    </table> 
+    <span class="d-flex justify-content-center">
+        <p class="text-center text-capitalize px-5 fs-1 mt-5 text-light bg-info" style="border-radius: 50px;">le modele des boites</p>
+    </span> 
+    <p>Le modèle des boîtes est un concept essentiel : « tout élément d’une page est une boîte rectangulaire
+        et peut avoir un padding, une marge et des bordures ».
+        </p>
+        <p class="text-info text-capitalize">Les propriétés permettant d’indiquer la longueur, la largeur, la marge, le padding et les bordures d’un élément forment ce qu’on appelle le modèle des boîtes.</p>
+        <table class="d-flex justify-content-center">
+            <tr>
+                <td class="text-info text-capitalize">proprietes</td>
+                <td  class="text-info text-capitalize">valeures</td>
+                <td  class="text-info text-capitalize">description</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>prend des valeure en porcentage ou en pixel</td>
+                <td>permet de definir la largeur d'un element</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>prend des valeure en porcentage ou en pixel</td>
+                <td>permet de definir la hauteur d'un element</td>
+            </tr>
+            <tr>
+                <td>margin</td>
+                <td>prend des valeure en porcentage ou en pixel</td>
+                <td>permet de definir le marge exterieur d'un element</td>
+            </tr>
+            <tr>
+                <td>padding</td>
+                <td>prend des valeure en porcentage ou en pixel</td>
+                <td>permet de definir le marge interieur d'un element</td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>prend des valeure en pixel</td>
+                <td>permet de definir la largeur du bordure d'un element</td>
+            </tr>
+        </table>
+        
+            <p class="text-info text-capitalize">d'autre types de proprietes en css.</p>
+            <table class="d-flex justify-content-center">
+                <tr>
+                    <td class="text-info text-capitalize">proprietes</td>
+                    <td  class="text-info text-capitalize">valeures</td>
+                    <td  class="text-info text-capitalize">description</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>left , right</td>
+                    <td>permet de position un element</td>
+                </tr>
+                <tr>display</tr>
+                <td> static , fixed , absolute , relative</td>
+                <td>: elle permet de changer le type d’un élément de block à inline ou d’inline à block</td>
+            </table>
+    </div>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+   
+</body>
+</html>
